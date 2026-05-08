@@ -1,0 +1,14 @@
+{
+  "product": "shopping-inventory-budget-memo",
+  "title": "買い物・在庫・家計メモ",
+  "domain": "AndroidApp",
+  "ideaNo": 1,
+  "platformType": "android-emulator",
+  "expectedPublicTarget": "Google Play",
+  "browser": null,
+  "android": {
+    "packageName": "com.sunmax0731.shoppinginventorybudgetmemo",
+    "evidence": "dist/android-emulator-result.json"
+  },
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
