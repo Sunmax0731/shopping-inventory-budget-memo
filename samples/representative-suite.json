@@ -1,0 +1,90 @@
+{
+  "product": "shopping-inventory-budget-memo",
+  "generatedAt": "2026-05-08T00:04:19Z",
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "records": [
+        {
+          "title": "買い物・在庫・家計メモ",
+          "category": "買い物・在庫・家計メモ category",
+          "nextAction": "在庫不足と予算メモから買い物リストを作る",
+          "priceMemo": "買い物・在庫・家計メモ priceMemo",
+          "reviewDate": "買い物・在庫・家計メモ reviewDate",
+          "id": "hp-001"
+        }
+      ],
+      "expected": {
+        "passes": 1,
+        "failures": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "records": [
+        {
+          "category": "買い物・在庫・家計メモ category",
+          "nextAction": "在庫不足と予算メモから買い物リストを作る",
+          "priceMemo": "買い物・在庫・家計メモ priceMemo",
+          "reviewDate": "買い物・在庫・家計メモ reviewDate",
+          "id": "missing-001"
+        }
+      ],
+      "expected": {
+        "passes": 0,
+        "failures": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "warning",
+      "records": [
+        {
+          "title": "買い物・在庫・家計メモ",
+          "category": "買い物・在庫・家計メモ category",
+          "nextAction": "在庫不足と予算メモから買い物リストを作る",
+          "reviewDate": "買い物・在庫・家計メモ reviewDate",
+          "id": "warn-001"
+        }
+      ],
+      "expected": {
+        "passes": 0,
+        "failures": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "records": [
+        {
+          "title": "買い物・在庫・家計メモ",
+          "category": "買い物・在庫・家計メモ category",
+          "nextAction": "在庫不足と予算メモから買い物リストを作る",
+          "priceMemo": "買い物・在庫・家計メモ priceMemo",
+          "reviewDate": "買い物・在庫・家計メモ reviewDate",
+          "id": "mixed-ok-001"
+        },
+        {
+          "title": "買い物・在庫・家計メモ",
+          "category": "買い物・在庫・家計メモ category",
+          "priceMemo": "買い物・在庫・家計メモ priceMemo",
+          "reviewDate": "買い物・在庫・家計メモ reviewDate",
+          "id": "mixed-bad-001"
+        },
+        {
+          "title": "買い物・在庫・家計メモ",
+          "category": "買い物・在庫・家計メモ category",
+          "nextAction": "在庫不足と予算メモから買い物リストを作る",
+          "reviewDate": "買い物・在庫・家計メモ reviewDate",
+          "id": "warn-001"
+        }
+      ],
+      "expected": {
+        "passes": 1,
+        "failures": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}
